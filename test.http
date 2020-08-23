@@ -1,0 +1,18 @@
+@url=http://localhost:3000
+@json=Content-Type: application/json
+
+### 首页
+GET {{url}} HTTP/1.1
+
+### 登录
+POST {{url}}/login HTTP/1.1
+{{json}}
+
+{
+  "uname": "zs",
+  "pwd": "qwe123"
+}
+
+### 个人资料
+GET {{url}}/profile HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTU5ODE3MzU3NCwiZXhwIjoxNTk4MTc1Mzc0fQ.3u-NOP5NseaMMNY1y4UZyzrQ6kdXWqfeRQb2QgZ3dRQ
